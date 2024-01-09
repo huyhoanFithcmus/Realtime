@@ -10,7 +10,7 @@ export default function CountDownPage() {
       </div>
       <div className='card'>
         <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>Ấn count đi mấy thằng đầu buồi</p>
+        <p>Ấn count càng nhiều thì có càng nhiều kiến vào máy bạn</p>
       </div>
     </>
   )
