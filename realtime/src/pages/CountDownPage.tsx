@@ -8,9 +8,8 @@ export default function CountDownPage() {
       // Render a completed state
       return (
         <>
-          <h1>Suka blyah</h1>
-          <h2>Bim Bim Bam Bam</h2>
-          <h3>Kiến bò vào quần</h3>
+          <h1>Robocus 2024 is over!</h1>
+          <h2>Thank you for participating!</h2>
         </>
       )
     } else {
