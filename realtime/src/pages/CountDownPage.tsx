@@ -16,7 +16,7 @@ export default function CountDownPage() {
       // Render a countdown
       return (
         <>
-          <div className='w-full h-screen bg-gradient-to-bl from-teal-400 to-blue-500 flex flex-col justify-center items-center text-white p-0'>
+          <div className='w-full h-screen bg-gradient-to-bl from-teal-400 to-blue-500 flex flex-col justify-center items-center text-white'>
             <h1 className='text-5xl p-4'>
               <b>ROBOCUS 2024</b> is coming!
             </h1>
