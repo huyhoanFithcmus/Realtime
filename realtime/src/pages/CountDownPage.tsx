@@ -1,16 +1,33 @@
-import React from 'react'
+import Countdown from 'react-countdown'
 
 export default function CountDownPage() {
-  const [count, setCount] = React.useState(0)
-
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const renderer = ({ hours, minutes, seconds, completed }: any) => {
+    if (completed) {
+      // Render a completed state
+      return (
+        <>
+          <h1>Suka blyah</h1>
+          <h2>Bim Bim Bam Bam</h2>
+          <h3>Kiến bò vào quần</h3>
+        </>
+      )
+    } else {
+      // Render a countdown
+      return (
+        <>
+          <h1>Countdown</h1>
+          <h2>
+            {hours}:{minutes}:{seconds}
+          </h2>
+        </>
+      )
+    }
+  }
   return (
     <>
       <div>
-        <h1>Vãi lồn anh em ơi</h1>
-      </div>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>Ấn count càng nhiều thì có càng nhiều kiến vào máy bạn</p>
+        <Countdown date={Date.now() + 10000} renderer={renderer} />
       </div>
     </>
   )
