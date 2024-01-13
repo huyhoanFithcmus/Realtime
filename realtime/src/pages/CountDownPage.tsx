@@ -1,4 +1,5 @@
 import Countdown from 'react-countdown'
+import NavigationBar from '~/assets/navbar/NavigationBar'
 
 export default function CountDownPage() {
   const DeadlineTime = new Date('2024-07-30T00:00:00')
@@ -17,6 +18,7 @@ export default function CountDownPage() {
       // Render a countdown
       return (
         <>
+          <NavigationBar />
           <div className='w-full h-screen bg-gradient-to-bl from-teal-400 to-blue-500 flex flex-col justify-center items-center text-white overflow-hidden'>
             <h1 className='text-5xl p-4 text-center'>
               <b>ROBOCUS 2024</b>
