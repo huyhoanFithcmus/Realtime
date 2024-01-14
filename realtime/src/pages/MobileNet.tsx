@@ -52,12 +52,15 @@ const MobileNet = () => {
             type='file'
             className='w-full mt-5 rounded-md focus:outline-none focus:ring focus:ring-blue-500'
             onChange={(e) => {
-              const file = e?.target?.files[0]
-              const reader = new FileReader()
-              reader.onloadend = () => {
-                setImage(reader.result as string)
+              const file = e.target.files?.[0]
+              if (file) {
+                const reader = new FileReader()
+                reader.readAsDataURL(file)
+                reader.onload = (e) => {
+                  const dataUrl = e.target?.result
+                  setImage(dataUrl as string)
+                }
               }
-              reader.readAsDataURL(file)
             }}
           />
           {/* optional upload image from computer */}
