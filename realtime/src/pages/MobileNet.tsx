@@ -47,6 +47,21 @@ const MobileNet = () => {
             placeholder='Enter image url here'
           />
 
+          {/* optional upload image from computer */}
+          <input
+            type='file'
+            className='w-full mt-5 rounded-md focus:outline-none focus:ring focus:ring-blue-500'
+            onChange={(e) => {
+              const file = e?.target?.files[0]
+              const reader = new FileReader()
+              reader.onloadend = () => {
+                setImage(reader.result as string)
+              }
+              reader.readAsDataURL(file)
+            }}
+          />
+          {/* optional upload image from computer */}
+
           <img src={image} alt='' className='mx-auto mt-4' style={{ width: '300px' }} />
 
           <button
