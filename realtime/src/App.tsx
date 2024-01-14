@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import CountDownPage from './pages/CountDownPage'
 import ToxicWordDetection from './pages/ToxicWordDetection'
-import MobileNet from './pages/MobileNet'
+import MobileNetPage from './pages/MobileNet'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           <Route path='/' element={<CountDownPage />} />
           <Route path='/ToxicWordDectection' element={<ToxicWordDetection />} />
           <Route path='*' element={<h1>Not Found</h1>} /> {/* 404 */}
-          <Route path='/MobileNet' element={<MobileNet />} />
+          <Route path='/MobileNet' element={<MobileNetPage />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,8 +1,8 @@
-import * as mobilenet from '@tensorflow-models/mobilenet'
 import { useEffect, useState } from 'react'
 import NavigationBar from '~/assets/navbar/NavigationBar'
+import * as mobilenet from '@tensorflow-models/mobilenet'
 
-const MobileNet = () => {
+const MobileNetPage = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [model, setModel] = useState<any>(null)
   const [image, setImage] = useState<string>('')
@@ -11,9 +11,13 @@ const MobileNet = () => {
   const [prediction, setPrediction] = useState<any>([])
 
   useEffect(() => {
-    mobilenet.load().then((loadedModel) => {
-      setModel(loadedModel)
-    })
+    mobilenet.load().then(
+      (
+        loadedModel: any // eslint-disable-line @typescript-eslint/no-explicit-any
+      ) => {
+        setModel(loadedModel)
+      }
+    )
   }, [])
 
   const loadImage = (url: string) => {
@@ -92,4 +96,4 @@ const MobileNet = () => {
   )
 }
 
-export default MobileNet
+export default MobileNetPage
