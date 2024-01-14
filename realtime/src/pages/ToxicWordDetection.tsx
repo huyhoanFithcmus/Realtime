@@ -11,6 +11,7 @@ const ToxicWordDetection = () => {
 
   useEffect(() => {
     toxicityClassifier.load(0.9, []).then((loadedModel) => {
+      console.log(loadedModel)
       setModel(loadedModel)
     })
   }, [])
