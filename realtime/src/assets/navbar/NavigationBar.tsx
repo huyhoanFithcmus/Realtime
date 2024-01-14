@@ -17,9 +17,9 @@ export default function NavigationBar() {
               Toxic Word Detection
             </button>
           </Link>
-          <Link to='/'>
+          <Link to='/MobileNet'>
             <button className='bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-500'>
-              Home
+              MobileNet
             </button>
           </Link>
         </div>
